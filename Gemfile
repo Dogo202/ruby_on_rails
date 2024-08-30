@@ -1,72 +1,186 @@
-source "https://rubygems.org"
-git_source(:github) { |repo| "https://github.com/#{repo}.git" }
-
+source 'https://rubygems.org'
 ruby "2.7.7"
 
-# Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
-gem "rails", "~> 7.0.0"
+# гемы не обновляем, вылезут ошибки
+# запрещен редирект на другие домены
+# ассеты не видит
+# пробблемы с созданием блоков в редакторе и хз очему не создает
+# сохранение обхектов не работает без каких либо сообщений
+# переход на новые библиотеки только точечно.
 
-# The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
-gem "sprockets-rails"
+# Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
+gem 'rails', '= 7.0.4.2'
+gem 'puma', '6.0.2'
+gem 'sidekiq', '<7'
+gem 'rack'
+gem 'delayed_job_active_record'
+gem 'delayed_job_web'
+gem 'daemons'
 
-# Use sqlite3 as the database for Active Record
-gem "sqlite3", "~> 1.4"
+gem 'sass'
+gem 'sass-rails'
+gem 'terser'
+gem 'coffee-rails'
+gem 'jquery-rails'
+gem 'jquery-ui-rails'
+gem 'turbolinks'
+gem 'jbuilder'
+gem 'russian'
 
-# Use the Puma web server [https://github.com/puma/puma]
-gem "puma", "~> 5.0"
+# Templates
+gem 'slim-rails'
 
-# Use JavaScript with ESM import maps [https://github.com/rails/importmap-rails]
-gem "importmap-rails"
+gem 'materialize-sass'
 
-# Hotwire's SPA-like page accelerator [https://turbo.hotwired.dev]
-gem "turbo-rails"
+gem 'simpleidn'
+gem 'dropzonejs-rails'
 
-# Hotwire's modest JavaScript framework [https://stimulus.hotwired.dev]
-gem "stimulus-rails"
+gem 'devise'
+gem 'activeadmin', '~> 2.9'
+gem 'inherited_resources', '~> 1.7'
+# gem 'activeadmin', github: 'activeadmin/activeadmin'
+# gem 'inherited_resources', github: 'activeadmin/inherited_resources'
 
-# Build JSON APIs with ease [https://github.com/rails/jbuilder]
-gem "jbuilder"
+gem 'activeadmin_addons'
+gem 'simple_form'
 
-# Use Redis adapter to run Action Cable in production
-# gem "redis", "~> 4.0"
+gem 'tzinfo', group: :development
+gem 'web-console', group: :development
+gem 'listen', '~> 3.0.5', group: :development
+gem 'spring' # он почему-то требуется на проде в кроне. в девелопмент не отправлять
+gem 'spring-watcher-listen', group: :development
+gem 'better_errors', group: :development
+gem 'binding_of_caller', group: :development
+gem 'pry', group: :development #Улучшение стилизации rails console
+gem 'bullet', '~> 7.0', '>= 7.0.1', group: :development #Помогает искать плохие запросы в БД
 
-# Use Kredis to get higher-level data types in Redis [https://github.com/rails/kredis]
-# gem "kredis"
+gem 'capistrano'
+gem 'capistrano-rvm'
+gem 'capistrano3-puma', '~> 6.0.0.beta.1'
+gem 'capistrano-sidekiq', '~> 2.3.0'
+gem 'capistrano-rails'
+gem 'capistrano-bundler'
 
-# Use Active Model has_secure_password [https://guides.rubyonrails.org/active_model_basics.html#securepassword]
-# gem "bcrypt", "~> 3.1.7"
 
-# Windows does not include zoneinfo files, so bundle the tzinfo-data gem
-gem "tzinfo-data", platforms: %i[ mingw mswin x64_mingw jruby ]
+gem 'sqlite', '~> 1.0', '>= 1.0.2'
 
-# Reduces boot times through caching; required in config/boot.rb
-gem "bootsnap", require: false
-
-# Use Sass to process CSS
-# gem "sassc-rails"
-
-# Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
-# gem "image_processing", "~> 1.2"
-
-group :development, :test do
-  # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
-  gem "debug", platforms: %i[ mri mingw x64_mingw ]
+group :production, :test do
+  gem 'rails_12factor'
 end
 
-group :development do
-  # Use console on exceptions pages [https://github.com/rails/web-console]
-  gem "web-console"
+gem 'kaminari'
+gem 'jquery-validation-rails'
 
-  # Add speed badges [https://github.com/MiniProfiler/rack-mini-profiler]
-  # gem "rack-mini-profiler"
 
-  # Speed up commands on slow machines / big apps [https://github.com/rails/spring]
-  # gem "spring"
-end
+gem 'whenever'
 
-group :test do
-  # Use system testing [https://guides.rubyonrails.org/testing.html#system-testing]
-  gem "capybara"
-  gem "selenium-webdriver"
-  gem "webdrivers"
-end
+gem 'chartkick'
+
+gem 'jquery-turbolinks'
+
+gem 'groupdate'
+
+gem 'rmagick', '4.2.5'
+gem 'carrierwave', '~> 2.2.3'
+gem 'aws-sdk-s3', '~> 1.143'
+gem 'fog-aws', '~> 3.11', require: 'fog/aws'
+gem 'mime-types'
+gem 'mini_magick'
+gem 'image_magick'
+
+
+gem 'simple_token_authentication'
+gem 'devise-token_authenticatable'
+
+gem 'i18n'
+
+gem 'omniauth-oauth2'
+gem 'omniauth-vkontakte', '~>1.6.0'
+gem 'vkontakte_api'
+
+gem 'dotenv-rails', groups: [:development, :test]
+gem 'recaptcha', require: 'recaptcha/rails'
+
+gem 'materialize-form'
+
+gem 'omniauth-facebook'
+
+gem 'omniauth-apple'
+gem 'jwt'
+
+gem 'redis'
+
+gem 'syntax-highlighter-rails'
+
+# For url address
+gem 'friendly_id'
+gem 'babosa'
+
+gem 'unix-crypt'
+
+gem 'telegram-bot'
+
+gem 'zeitwerk'
+
+gem 'fcm'
+gem 'geocoder'
+gem "rdoc", '~> 4'
+gem 'bindata'
+gem 'byebug'
+
+gem 'httparty'
+gem 'yui-compressor'
+gem 'rack-brotli'
+gem 'net-ping'
+
+gem 'puma_worker_killer'
+
+gem "composite_primary_keys"
+gem 'omniauth-yandex'
+
+# для генерации pdf
+gem 'wicked_pdf'
+gem 'wkhtmltopdf-binary'
+
+# помогает записывать цифры прописью
+gem 'numbers_and_words'
+
+gem 'activerecord-import'# Для того что бы много записей за раз в бд вносить
+
+# source 'https://rubygems.org'
+# git_source(:github) { |repo| "https://github.com/#{repo}.git" }
+# gem 'rails',
+#     '7.0.0.0'
+# gem 'puma',
+#     '3.12.2'
+# gem 'sass-rails', '5.1.0'
+# #gem 'webpacker', '4.0.7'
+# gem 'turbolinks', '5.2.0'
+# gem 'jbuilder',
+#     '2.9.1'
+# gem 'bootsnap',
+#     '1.4.5', require: false
+# gem 'net-http'
+# gem 'importmap-rails'
+# group :development, :test do
+#   gem 'sqlite3', '1.4.1'
+#   gem 'byebug', '11.0.1', platforms: [:mri, :mingw, :x64_mingw]
+# end
+# group :development do
+#   gem 'web-console',
+#       '4.0.1'
+#   gem 'listen',
+#       '3.1.5'
+#   gem 'spring',
+#       '2.1.0'
+#   gem 'spring-watcher-listen', '2.0.1'
+# end
+# group :test do
+#   gem 'capybara',
+#       '3.28.0'
+#   gem 'selenium-webdriver', '3.142.4'
+#   gem 'webdrivers',
+#       '4.1.2'
+# end
+# # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
+# gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
