@@ -1,0 +1,11 @@
+p style="color: green" = notice
+
+h1 Microposts
+
+#microposts
+  - @microposts.each do |micropost|
+    == render micropost
+    p
+      = link_to "Show this micropost", micropost
+
+= link_to "New micropost", new_micropost_path
