@@ -61,8 +61,10 @@ gem 'capistrano-sidekiq', '~> 2.3.0'
 gem 'capistrano-rails'
 gem 'capistrano-bundler'
 
+gem 'importmap-rails'
 
-gem 'sqlite', '~> 1.0', '>= 1.0.2'
+
+gem 'sqlite3', '~> 1.6', '>= 1.6.7'
 
 group :production, :test do
   gem 'rails_12factor'
