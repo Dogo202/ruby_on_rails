@@ -132,6 +132,7 @@
     <orderEntry type="library" scope="PROVIDED" name="i18n (v1.12.0, rbenv: 2.7.7) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="image_magick (v0.1.9, rbenv: 2.7.7) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="image_processing (v1.12.2, rbenv: 2.7.7) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="importmap-rails (v2.0.1, rbenv: 2.7.7) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="inherited_resources (v1.14.0, rbenv: 2.7.7) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="jbuilder (v2.11.5, rbenv: 2.7.7) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="jmespath (v1.6.2, rbenv: 2.7.7) [gem]" level="application" />
@@ -230,7 +231,7 @@
     <orderEntry type="library" scope="PROVIDED" name="spring-watcher-listen (v2.1.0, rbenv: 2.7.7) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="sprockets (v4.2.0, rbenv: 2.7.7) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="sprockets-rails (v3.4.2, rbenv: 2.7.7) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="sqlite (v1.0.2, rbenv: 2.7.7) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="sqlite3 (v1.6.7, rbenv: 2.7.7) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="sshkit (v1.21.3, rbenv: 2.7.7) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="ssrf_filter (v1.1.2, rbenv: 2.7.7) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="syntax-highlighter-rails (v3.0.83.1.1, rbenv: 2.7.7) [gem]" level="application" />
