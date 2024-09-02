@@ -637,6 +637,7 @@ DEPENDENCIES
   mime-types
   mini_magick
   net-ping
+  net-protocol (~> 0.2.1)
   numbers_and_words
   omniauth-apple
   omniauth-facebook
