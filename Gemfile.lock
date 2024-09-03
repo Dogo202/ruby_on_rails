@@ -122,6 +122,9 @@ GEM
     bindex (0.8.1)
     binding_of_caller (1.0.0)
       debug_inspector (>= 0.0.1)
+    bootstrap-sass (3.4.1)
+      autoprefixer-rails (>= 5.2.1)
+      sassc (>= 2.0.0)
     brotli (0.4.0)
     builder (3.2.4)
     bullet (7.0.7)
@@ -595,6 +598,7 @@ DEPENDENCIES
   better_errors
   bindata
   binding_of_caller
+  bootstrap-sass
   bullet (~> 7.0, >= 7.0.1)
   byebug
   capistrano
@@ -637,7 +641,6 @@ DEPENDENCIES
   mime-types
   mini_magick
   net-ping
-  net-protocol (~> 0.2.1)
   numbers_and_words
   omniauth-apple
   omniauth-facebook

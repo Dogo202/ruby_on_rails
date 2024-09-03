@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
-  get 'static_page/home'
-  get 'static_page/help'
-  get 'static_page/about'
+  get 'home' => 'static_page#home'
+  get 'help' =>  'static_page#help'
+  get 'about' =>  'static_page#about'
+  get 'contact' =>  'static_page#contact'
+  get 'signup' => 'users#new'
   resources :microposts
   resources :users
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
