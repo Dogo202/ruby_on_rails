@@ -595,6 +595,7 @@ DEPENDENCIES
   activerecord-import
   aws-sdk-s3 (~> 1.143)
   babosa
+  bcrypt
   better_errors
   bindata
   binding_of_caller

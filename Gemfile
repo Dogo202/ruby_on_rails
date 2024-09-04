@@ -18,6 +18,7 @@ gem 'delayed_job_web'
 gem 'daemons'
 
 gem 'bootstrap-sass'
+gem 'bcrypt'
 
 gem 'sass'
 gem 'sass-rails'
