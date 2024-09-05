@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  root 'static_page#home'
   get    'home'    => 'static_page#home'
   get    'help'    =>  'static_page#help'
   get    'about'   =>  'static_page#about'
@@ -15,5 +16,4 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "articles#index"
-  root 'static_page#home'
 end

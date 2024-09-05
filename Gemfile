@@ -17,8 +17,11 @@ gem 'delayed_job_active_record'
 gem 'delayed_job_web'
 gem 'daemons'
 
+#добавлены из за книги
 gem 'bootstrap-sass'
 gem 'bcrypt'
+gem 'rails-controller-testing'
+gem 'sqlite3', '~> 1.6', '>= 1.6.7'
 
 gem 'sass'
 gem 'sass-rails'
@@ -67,7 +70,7 @@ gem 'capistrano-bundler'
 gem 'importmap-rails'
 
 
-gem 'sqlite3', '~> 1.6', '>= 1.6.7'
+
 
 group :production, :test do
   gem 'rails_12factor'
