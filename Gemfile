@@ -24,6 +24,7 @@ gem 'rails-controller-testing'
 gem 'sqlite3', '~> 1.6', '>= 1.6.7'
 gem 'faker'
 gem 'will_paginate', '~> 3.3'
+gem 'bootstrap-will_paginate'
 
 
 gem 'sass'
