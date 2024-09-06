@@ -205,6 +205,8 @@ GEM
     erubi (1.12.0)
     excon (0.109.0)
     execjs (2.8.1)
+    faker (3.4.2)
+      i18n (>= 1.8.11, < 2)
     faraday (1.10.3)
       faraday-em_http (~> 1.0)
       faraday-em_synchrony (~> 1.0)
@@ -583,6 +585,7 @@ GEM
       chronic (>= 0.6.3)
     wicked_pdf (2.7.0)
       activesupport
+    will_paginate (3.3.1)
     wkhtmltopdf-binary (0.12.6.6)
     xdan-datetimepicker-rails (2.5.4)
       jquery-rails
@@ -623,6 +626,7 @@ DEPENDENCIES
   devise-token_authenticatable
   dotenv-rails
   dropzonejs-rails
+  faker
   fcm
   fog-aws (~> 3.11)
   friendly_id
@@ -685,6 +689,7 @@ DEPENDENCIES
   web-console
   whenever
   wicked_pdf
+  will_paginate (~> 3.3)
   wkhtmltopdf-binary
   yui-compressor
   zeitwerk
