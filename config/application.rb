@@ -18,5 +18,6 @@ module RubyOnRails
     #
     # config.time_zone = "Central Time (US & Canada)"
     # config.eager_load_paths << Rails.root.join("extras")
+    config.encoding = "utf-8"
   end
 end
