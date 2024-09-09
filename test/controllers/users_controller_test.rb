@@ -49,7 +49,7 @@ class UsersControllerTest < ActionDispatch::IntegrationTest
   # end
 
   test "should redirect edit when not logged in" do
-    get edit_user_path
+    get edit_user_url
     assert_not flash.empty?
     assert_redirected_to login_url
   end

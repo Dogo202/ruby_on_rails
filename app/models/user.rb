@@ -1,6 +1,6 @@
 class User < ActiveRecord::Base
   attr_accessor :remember_token, :activation_token, :reset_token
-  has_many :microposts
+  has_many :microposts, dependent: :destroy
   before_save   :downcase_email
   before_create :create_activation_digest
   validates :name, presence: true, uniqueness: false ,length: {maximum: 50}
@@ -12,6 +12,10 @@ class User < ActiveRecord::Base
     cost = ActiveModel::SecurePassword.min_cost ? BCrypt::Engine::MIN_COST :
              BCrypt::Engine.cost
     BCrypt::Password.create(string, cost: cost)
+  end
+
+  def feed
+    Micropost.where("user_id = ?", id)
   end
 
   def User.new_token
