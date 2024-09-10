@@ -1,0 +1,26 @@
+= provide(:title, @user.name)
+.row
+  aside.col-md-4
+    section
+      h1
+        = gravatar_for @user
+        = @user.name
+    section.stats
+      = render 'shared/stats'
+  .col-md-8
+    -if logged_in?
+      = render 'follow_form'
+    - if @user.microposts.any?
+      h3 Microposts (#{@user.microposts.count})
+      ol.microposts
+        - @microposts.each do |micropost|
+          li id="micropost-#{micropost.id}"
+            = link_to gravatar_for(micropost.user, size: 50), micropost.user
+            span.user
+              = link_to micropost.user.name, micropost.user
+            span.content
+              = micropost.content
+              = image_tag micropost.image if micropost.image.attached?
+            span.timestamp
+              | Posted #{time_ago_in_words(micropost.created_at)} ago.
+      = will_paginate @microposts
