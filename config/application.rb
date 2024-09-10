@@ -1,6 +1,7 @@
 require_relative "boot"
 
 require "rails/all"
+require_relative 'boot'
 
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
@@ -19,5 +20,6 @@ module RubyOnRails
     # config.time_zone = "Central Time (US & Canada)"
     # config.eager_load_paths << Rails.root.join("extras")
     config.encoding = "utf-8"
+    config.action_view.embed_authenticity_token_in_remote_forms = true
   end
 end

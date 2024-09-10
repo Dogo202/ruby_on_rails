@@ -35,6 +35,7 @@
     <orderEntry type="library" scope="PROVIDED" name="actiontext (v7.0.4.2, rbenv: 2.7.7) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="actionview (v7.0.4.2, rbenv: 2.7.7) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="active_material (v1.5.2, rbenv: 2.7.7) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="active_storage_validations (v0.8.2, rbenv: 2.7.7) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="activeadmin (v2.14.0, rbenv: 2.7.7) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="activeadmin_addons (v1.9.0, rbenv: 2.7.7) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="activejob (v7.0.4.2, rbenv: 2.7.7) [gem]" level="application" />
@@ -42,7 +43,6 @@
     <orderEntry type="library" scope="PROVIDED" name="activerecord (v7.0.4.2, rbenv: 2.7.7) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="activerecord-import (v1.6.0, rbenv: 2.7.7) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="activestorage (v7.0.4.2, rbenv: 2.7.7) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="activestorage-validator (v0.3.0, rbenv: 2.7.7) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="activesupport (v7.0.4.2, rbenv: 2.7.7) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="addressable (v2.8.1, rbenv: 2.7.7) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="aes_key_wrap (v1.1.0, rbenv: 2.7.7) [gem]" level="application" />
