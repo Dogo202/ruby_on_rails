@@ -29,9 +29,7 @@ class User < ActiveRecord::Base
     BCrypt::Password.create(string, cost: cost)
   end
 
-  def feed
-    Micropost.where("user_id = ?", id)
-  end
+
 
   def User.new_token
     SecureRandom.urlsafe_base64
@@ -74,6 +72,16 @@ class User < ActiveRecord::Base
   def send_password_reset_email
     UserMailer.password_reset(self).deliver_now
   end
+
+
+  def feed
+    following_ids = "SELECT followed_id FROM relationships
+                   WHERE  follower_id = :user_id"
+
+    Micropost.where("user_id IN (#{following_ids})
+                     OR user_id = :user_id", user_id: id)
+  end
+
 
   def follow(other_user)
     active_relationships.create(followed_id: other_user.id)

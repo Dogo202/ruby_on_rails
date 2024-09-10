@@ -10,8 +10,22 @@
       section.micropost_form
         = render 'shared/micropost_form'
     .col-md-8
-      h3 Micropost Feed
-      = render 'shared/feed'
+      h3 |Micropost Feed
+
+      - if @feed_items.any?
+        ol.microposts
+          - @feed_items.each do |feed_item|
+            li id="micropost-#{feed_item.id}"
+              = link_to gravatar_for(feed_item.user, size: 50), feed_item.user
+              span.user
+                = link_to feed_item.user.name, feed_item.user
+              span.content
+                = feed_item.content
+                = image_tag feed_item.image if feed_item.image.attached?
+              span.timestamp
+                | Posted #{time_ago_in_words(feed_item.created_at)} ago.
+
+        = will_paginate @feed_items, params: { controller: :static_page, action: :home }
 - else
   div.center.jumbotron
     h1 Welcome to the Sample App
