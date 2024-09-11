@@ -13,7 +13,7 @@
       = render 'shared/stats'
       - if @users.any?
         .user_avatars
-          = @users.each do |user|
+          - @users.each do |user|
             = link_to gravatar_for(user, size: 30), user
 
   .col-md-8
