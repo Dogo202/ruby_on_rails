@@ -1,0 +1,48 @@
+/ h2 Log in
+/
+/ = simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
+/   .form-inputs
+/     = f.input :email,
+/                 required: false,
+/                 autofocus: true,
+/                 input_html: { autocomplete: "email" }
+/     = f.input :password,
+/                 required: false,
+/                 input_html: { autocomplete: "current-password" }
+/     = f.input :remember_me, as: :boolean if devise_mapping.rememberable?
+/
+/
+/   .form-actions
+/     = f.button :submit, "Log in"
+/
+/ = render "devise/shared/links"
+
+
+= provide(:title, "Log in")
+h1 Log in
+= render "devise/shared/error_messages"
+
+.row
+  .col-md-6.col-md-offset-3
+    = simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
+      = f.label :email
+      = f.email_field :email, class: 'form-control'
+
+      = f.label :password
+      = link_to "(forgot password)", new_user_password_path
+
+      = f.password_field :password, class: 'form-control'
+
+      = f.label :remember_me, class: "checkbox inline" do
+        = f.input :remember_me, as: :boolean if devise_mapping.rememberable?
+
+
+
+      = f.submit "Log in", class: "btn btn-primary"
+
+    p
+      | New user?
+      = render "devise/shared/links"
+
+
+      / = link_to "Sign up now!", new_registration_path

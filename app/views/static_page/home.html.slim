@@ -1,6 +1,8 @@
 - provide(:title, "Home")
 - debug(params) if Rails.env.development?
-- if logged_in?
+- if user_signed_in?
+  -@micropost  = current_user.microposts.build
+  -@feed_items = current_user.feed.paginate(page: params[:page])
   .row
     aside.col-md-4
       section.user_info
@@ -10,7 +12,8 @@
       section.micropost_form
         = render 'shared/micropost_form'
     .col-md-8
-      h3 |Micropost Feed
+      h3
+        |Micropost Feed
 
       - if @feed_items.any?
         ol.microposts
@@ -35,6 +38,6 @@
       a href="http://www.railstutorial.org/"  Ruby on Rails Tutorial
       |  sample application.
 
-    = link_to "Sign up now!", signup_path , class: "btn btn-lg btn-primary"
+    = link_to "Sign up now!", new_user_session_path , class: "btn btn-lg btn-primary"
 
   = link_to image_tag("rails.png", alt: "Rails logo"), 'http://rubyonrails.org/'

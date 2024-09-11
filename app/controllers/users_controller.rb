@@ -1,10 +1,11 @@
 class UsersController < ApplicationController
   #before_action :set_user, only: [:show, :edit, :update, :destroy]
-  before_action :logged_in_user, only: [:index, :edit, :update, :destroy,
-                                        :following, :followers]
-
-  before_action :correct_user, only: [:edit, :update]
-  before_action :admin_user, only: :destroy
+  # before_action :logged_in_user, only: [:index, :edit, :update, :destroy,
+  #                                       :following, :followers]
+  #
+  # before_action :correct_user, only: [:edit, :update]
+  # before_action :admin_user, only: :destroy
+  before_action :authenticate_user!
 
 
 
@@ -18,7 +19,7 @@ class UsersController < ApplicationController
   # GET /users/1.json
   def show
     @user = User.find(params[:id])
-    redirect_to(root_url) && return unless @user.activated?
+    redirect_to(root_url) && return unless @user.confirmed?
     @microposts = @user.microposts.paginate(page: params[:page],per_page: 30)
   end
 
@@ -28,9 +29,9 @@ class UsersController < ApplicationController
   # end
 
   # GET /users/1/edit
-  # def edit
-  #   @user = User.find(params[:id])
-  # end
+  def edit
+    @user = User.find(params[:id])
+  end
 
   # POST /users
   # POST /users.json
@@ -68,11 +69,11 @@ class UsersController < ApplicationController
 
   # DELETE /users/1
   # DELETE /users/1.json
-  # def destroy
-  #   User.find(params[:id]).destroy
-  #   flash[:success] = "User deleted"
-  #   redirect_to users_url
-  # end
+  def destroy
+    User.find(params[:id]).destroy
+    flash[:success] = "User deleted"
+    redirect_to users_url
+  end
 
   def following
     @title = "Following"
