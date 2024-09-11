@@ -5,14 +5,14 @@ class UsersController < ApplicationController
   #
   # before_action :correct_user, only: [:edit, :update]
   # before_action :admin_user, only: :destroy
-  before_action :authenticate_user!
+
 
 
 
   # GET /users
   # GET /users.json
   def index
-    @users = User.paginate(page: params[:page],per_page: 30)
+    @users = User.page(params[:page]).per(30)
   end
 
   # GET /users/1
@@ -20,7 +20,7 @@ class UsersController < ApplicationController
   def show
     @user = User.find(params[:id])
     redirect_to(root_url) && return unless @user.confirmed?
-    @microposts = @user.microposts.paginate(page: params[:page],per_page: 30)
+    @microposts = @user.microposts.page(params[:page]).per(30)
   end
 
   # GET /users/new
@@ -78,14 +78,14 @@ class UsersController < ApplicationController
   def following
     @title = "Following"
     @user = User.find(params[:id])
-    @users = @user.following.paginate(page: params[:page])
+    @users = @user.following.page(params[:page])
     render 'show_follow'
   end
 
   def followers
     @title = "Followers"
     @user = User.find(params[:id])
-    @users = @user.followers.paginate(page: params[:page])
+    @users = @user.followers.page(params[:page])
     render 'show_follow'
   end
 

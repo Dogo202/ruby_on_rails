@@ -1,8 +1,9 @@
 class ApplicationController < ActionController::Base
-  before_action :authenticate_user!
+  before_action :authenticate_user!, unless: :admin_controller?
+  before_action :configure_permitted_parameters, if: :devise_controller?
   protect_from_forgery with: :exception
   include SessionsHelper
-  before_action :configure_permitted_parameters, if: :devise_controller?
+
 
   protected
 
@@ -20,5 +21,9 @@ class ApplicationController < ActionController::Base
       flash[:danger] = "Please log in."
       redirect_to login_url
     end
+  end
+
+  def admin_controller?
+    self.class < ActiveAdmin::BaseController
   end
 end

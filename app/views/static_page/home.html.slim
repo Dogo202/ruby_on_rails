@@ -2,7 +2,7 @@
 - debug(params) if Rails.env.development?
 - if user_signed_in?
   -@micropost  = current_user.microposts.build
-  -@feed_items = current_user.feed.paginate(page: params[:page])
+  -@feed_items = current_user.feed.page(params[:page])
   .row
     aside.col-md-4
       section.user_info
@@ -28,7 +28,7 @@
               span.timestamp
                 | Posted #{time_ago_in_words(feed_item.created_at)} ago.
 
-        = will_paginate @feed_items, params: { controller: :static_page, action: :home }
+        = paginate @feed_items, params: { controller: :static_page, action: :home }
 - else
   div.center.jumbotron
     h1 Welcome to the Sample App

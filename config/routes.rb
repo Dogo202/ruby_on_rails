@@ -1,9 +1,10 @@
 Rails.application.routes.draw do
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
+
   devise_for :users
 
-  root 'static_page#home'
+
   get    'home'    => 'static_page#home'
   get    'help'    => 'static_page#help'
   get    'about'   => 'static_page#about'
@@ -25,6 +26,7 @@ Rails.application.routes.draw do
   end
   resources :relationships, only: [:create, :destroy]
 
+  root 'static_page#home'
 
 
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html

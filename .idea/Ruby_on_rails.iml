@@ -63,7 +63,6 @@
     <orderEntry type="library" scope="PROVIDED" name="bindex (v0.8.1, rbenv: 2.7.7) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="binding_of_caller (v1.0.0, rbenv: 2.7.7) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="bootstrap-sass (v3.4.1, rbenv: 2.7.7) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="bootstrap-will_paginate (v1.0.0, rbenv: 2.7.7) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="brotli (v0.4.0, rbenv: 2.7.7) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="builder (v3.2.4, rbenv: 2.7.7) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="bullet (v7.0.7, rbenv: 2.7.7) [gem]" level="application" />
@@ -260,7 +259,6 @@
     <orderEntry type="library" scope="PROVIDED" name="websocket-extensions (v0.1.5, rbenv: 2.7.7) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="whenever (v1.0.0, rbenv: 2.7.7) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="wicked_pdf (v2.7.0, rbenv: 2.7.7) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="will_paginate (v3.3.1, rbenv: 2.7.7) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="wkhtmltopdf-binary (v0.12.6.6, rbenv: 2.7.7) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="xdan-datetimepicker-rails (v2.5.4, rbenv: 2.7.7) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="yui-compressor (v0.12.0, rbenv: 2.7.7) [gem]" level="application" />
