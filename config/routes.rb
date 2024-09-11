@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  devise_for :users
+
   root 'static_page#home'
   get    'home'    => 'static_page#home'
   get    'help'    => 'static_page#help'
